@@ -1,4 +1,15 @@
-for (let i = 1; i <= 255; i++) {
+const readlineSync = require("readline-sync");
+
+let userInput = 0;
+
+//ensures user provides positive number
+while (userInput <= 0) {
+  userInput = readlineSync.question("Please provide a positive number ");
+}
+
+userInput = parseInt(userInput);
+
+for (let i = 1; i <= userInput; i++) {
   let result = "";
 
   //conditions
